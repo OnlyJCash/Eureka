@@ -5,13 +5,13 @@
 	<artifactId>eureka-superpom</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	
+
 	<scm>
-		<url>http://spidercloud.it/svn/Monosand/Eureka/eureka-superpom/trunk</url>
-		<developerConnection>scm:svn:http://spidercloud.it/svn/Monosand/Eureka/eureka-superpom/trunk</developerConnection>
-		<connection>scm:svn:http://spidercloud.it/svn/Monosand/Eureka/eureka-superpom/trunk</connection>
+		<url>https://github.com/OnlyJCash/Eureka/tree/master/eureka-superpom</url>
+		<developerConnection>scm:git:https://github.com/OnlyJCash/Eureka/tree/master/eureka-superpom</developerConnection>
+		<connection>scm:git:https://github.com/OnlyJCash/Eureka/tree/master/eureka-superpom</connection>
 	</scm>
-	
+
 	<distributionManagement>
 		<repository>
 			<id>ftp-maven-repository</id>
@@ -19,8 +19,15 @@
 			<url>ftp://185.17.106.75/home/maven-user/repository</url>
 		</repository>
 	</distributionManagement>
-	
+
 	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ftp</artifactId>
+				<version>2.9</version>
+			</extension>
+		</extensions>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -54,11 +61,13 @@
 						</providerImplementations>
 					</configuration>
 					<dependencies>
+						<!-- <dependency> <groupId>com.google.code.maven-scm-provider-svnjava</groupId> 
+							<artifactId>maven-scm-provider-svnjava</artifactId> <version>2.0.6</version> 
+							<scope>compile</scope> </dependency> -->
 						<dependency>
-							<groupId>com.google.code.maven-scm-provider-svnjava</groupId>
-							<artifactId>maven-scm-provider-svnjava</artifactId>
-							<version>2.0.6</version>
-							<scope>compile</scope>
+							<groupId>org.apache.maven.scm</groupId>
+							<artifactId>maven-scm-provider-gitexe</artifactId>
+							<version>1.9</version>
 						</dependency>
 					</dependencies>
 				</plugin>
@@ -70,23 +79,12 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<!-- 
 				<configuration>
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.7</source>
+					<target>1.7</target>
 					<encoding>UTF-8</encoding>
-					<compilerVersion>1.8</compilerVersion>
+					<compilerVersion>1.7</compilerVersion>
 				</configuration>
-				<executions>
-					<execution>
-						<id>compile-project</id>
-						<phase>install</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
-					</execution>
-				</executions>
-				 -->
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
