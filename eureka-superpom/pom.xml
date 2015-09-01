@@ -1,0 +1,97 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.eureka</groupId>
+	<artifactId>eureka-superpom</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	
+	<scm>
+		<url>http://spidercloud.it/svn/Monosand/Eureka/eureka-superpom/trunk</url>
+		<developerConnection>scm:svn:http://spidercloud.it/svn/Monosand/Eureka/eureka-superpom/trunk</developerConnection>
+		<connection>scm:svn:http://spidercloud.it/svn/Monosand/Eureka/eureka-superpom/trunk</connection>
+	</scm>
+	
+	<distributionManagement>
+		<repository>
+			<id>ftp-maven-repository</id>
+			<name>Mononsand - Maven Repository</name>
+			<url>ftp://185.17.106.75/home/maven-user/repository</url>
+		</repository>
+	</distributionManagement>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.2</version>
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+						<encoding>UTF-8</encoding>
+					</configuration>
+					<executions>
+						<execution>
+							<id>compile-project</id>
+							<phase>install</phase>
+							<goals>
+								<goal>compile</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-release-plugin</artifactId>
+					<version>2.5.1</version>
+					<configuration>
+						<tagBase>${project.scm.url}/tags</tagBase>
+						<autoVersionSubmodules>true</autoVersionSubmodules>
+						<providerImplementations>
+							<svn>javasvn</svn>
+						</providerImplementations>
+					</configuration>
+					<dependencies>
+						<dependency>
+							<groupId>com.google.code.maven-scm-provider-svnjava</groupId>
+							<artifactId>maven-scm-provider-svnjava</artifactId>
+							<version>2.0.6</version>
+							<scope>compile</scope>
+						</dependency>
+					</dependencies>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+		<plugins>
+			<!-- Plugin per far compilare a MAVEN -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<!-- 
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+					<compilerVersion>1.8</compilerVersion>
+				</configuration>
+				<executions>
+					<execution>
+						<id>compile-project</id>
+						<phase>install</phase>
+						<goals>
+							<goal>compile</goal>
+						</goals>
+					</execution>
+				</executions>
+				 -->
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>
