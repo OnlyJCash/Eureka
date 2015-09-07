@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context 
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/mvc
+                           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+	
+	<context:component-scan base-package="com.eureka.cms.rs" />
+	
+	<bean id="GsonHttpMessageConverter" class="com.eureka.cms.rs.converter.GsonHttpMessageConverter" />
+
+
+	<!-- Validator configuration 
+		http://stackoverflow.com/questions/21696146/spring-4-and-hibernate-5-method-argument-validation
+	-->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+	<bean class="org.springframework.validation.beanvalidation.MethodValidationPostProcessor"/>
+
+	<mvc:annotation-driven validator="validator">
+		<mvc:message-converters register-defaults="true">
+			<ref bean="GsonHttpMessageConverter"/>
+		</mvc:message-converters>
+	</mvc:annotation-driven>
+	
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/console/**" />
+			<bean class="com.eureka.cms.rs.service.interceptor.OAuthRestApiInterceptor" />
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/console/**/resource/**" />
+			<bean class="com.eureka.cms.rs.service.interceptor.SecureAccessEntityInterceptor" />
+		</mvc:interceptor>
+	</mvc:interceptors>
+	
+	<bean id="restExceptionResolver"
+		class="cz.jirutka.spring.exhandler.RestHandlerExceptionResolverFactoryBean">
+		<property name="httpMessageConverters">
+			<list>
+				<ref bean="GsonHttpMessageConverter"/>
+			</list>
+		</property>
+		<property name="defaultContentType" value="application/json" />
+		<property name="exceptionHandlers">
+			<map>
+				<entry key="javax.validation.ConstraintViolationException">
+					<bean class="com.eureka.cms.rs.service.interceptor.RequestNotValidExceptionHandler" />
+				</entry>
+				<entry key="com.eureka.cms.rs.auth.exception.AuthenticationException">
+					<bean class="com.eureka.cms.rs.auth.handler.AuthenticationExceptionHandler" />
+				</entry>
+				<entry key="org.springframework.web.bind.MissingServletRequestParameterException">
+					<bean class="com.eureka.cms.rs.service.interceptor.RequestNotValidExceptionHandler" />			
+				</entry>
+				<entry key="org.springframework.web.bind.MethodArgumentNotValidException">	
+					<bean class="com.eureka.cms.rs.service.interceptor.RequestNotValidExceptionHandler" />
+				</entry>
+			</map>
+		</property>
+	</bean>
+	<!-- 
+	<bean id="compositeExceptionResolver"
+		class="org.springframework.web.servlet.handler.HandlerExceptionResolverComposite">
+		<property name="order" value="0" />
+		<property name="exceptionResolvers">
+			<list>
+				<ref bean="restExceptionResolver" />
+			</list>
+		</property>
+	</bean>
+
+	
+	<bean id="exceptionHandlerExceptionResolver"
+		class="org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver" />
+
+	<bean id="httpErrorMessageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
+		p:basename="classpath:/org/example/errorMessages" p:defaultEncoding="UTF-8" />
+	 -->
+</beans>

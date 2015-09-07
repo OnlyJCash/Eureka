@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   					   http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 	<bean id="entityMapConverterId" class="com.eureka.cms.rs.adapter.converter.EntityMapConverter" /> -->
+	
+	<bean id="configurationMapper" class="org.dozer.spring.DozerBeanMapperFactoryBean">
+		<property name="mappingFiles" value="classpath*:**/dozer/*-mapping.xml" />
+	</bean>
+	
+	<bean id="configurationAdapter" class="com.eureka.cms.rs.adapter.ConfigurationAdapterImpl"/>
+	<bean id="secureAccessEntity" class="com.eureka.cms.rs.adapter.SecureAccessEntityImpl"/>		
+</beans>    

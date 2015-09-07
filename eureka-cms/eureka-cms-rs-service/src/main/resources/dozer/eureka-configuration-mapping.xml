@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping type="one-way">
+		<class-a>com.eureka.cms.core.cfg.bean.EurekaConfiguration</class-a>
+		<class-b>
+			com.eureka.cms.rs.adapter.bean.cfg.ConfigurationBean
+		</class-b>
+		
+		<field>
+			<a>project</a>
+			<b>project</b>
+		</field>
+		
+		<field custom-converter="com.eureka.cms.rs.adapter.converter.EntityMapConverter">
+			<a>entities</a>
+			<b>entities</b>
+			<a-hint>java.util.Map</a-hint>
+			<b-hint>java.util.Map</b-hint>
+		</field>
+		<field custom-converter="com.eureka.cms.rs.adapter.converter.TagMapConverter">
+			<a>tags</a>
+			<b>tags</b>
+			<a-hint>java.util.Map</a-hint>
+			<b-hint>java.util.Map</b-hint>
+		</field>
+	</mapping>
+	
+	<mapping type="one-way">
+		<class-a>com.eureka.cms.core.cfg.bean.entity.EntityDescriptor</class-a>
+		<class-b>com.eureka.cms.rs.adapter.bean.cfg.entity.EntityBean</class-b>
+		
+		<field custom-converter="com.eureka.cms.rs.adapter.converter.FieldMapConverter">
+			<a>fields</a>
+			<b>fields</b>
+			<a-hint>java.util.Map</a-hint>
+			<b-hint>java.util.Map</b-hint>
+		</field>
+		<field>
+			<a>tags</a>
+			<b>tags</b>
+			<a-hint>java.util.Set</a-hint>
+			<b-hint>java.util.List</b-hint>
+		</field>
+	</mapping>
+
+	<mapping type="one-way">
+		<class-a>com.eureka.cms.core.cfg.bean.entity.PropertyDescriptor</class-a>
+		<class-b>com.eureka.cms.rs.adapter.bean.cfg.entity.FieldBean</class-b>
+		<field custom-converter="com.eureka.cms.rs.adapter.converter.PropertyTypeConverter">
+			<a>type</a>
+			<b>type</b>
+		</field>
+	</mapping>
+
+	<mapping type="one-way">
+		<class-a>com.eureka.cms.core.cfg.bean.entity.RelationDescriptor</class-a>
+		<class-b>com.eureka.cms.rs.adapter.bean.cfg.entity.FieldBean</class-b>
+		
+		<field custom-converter="com.eureka.cms.rs.adapter.converter.PropertyTypeConverter">
+			<a>type</a>
+			<b>type</b>
+		</field>
+		<field custom-converter="com.eureka.cms.rs.adapter.converter.TargetConverter">
+			<a>target</a>
+			<b>target</b>
+		</field>
+	</mapping>
+	
+
+	<mapping type="one-way">
+		<class-a>com.eureka.cms.core.cfg.bean.ProjectDescriptor</class-a>
+		<class-b>com.eureka.cms.rs.adapter.bean.cfg.ProjectBean</class-b>
+		<field>
+			<a>label</a>
+			<b>label</b>
+		</field>	
+		<field>
+			<a>description</a>
+			<b>description</b>
+		</field>
+		<field>
+			<a>footer</a>
+			<b>footerDescription</b>
+		</field>
+	</mapping>
+	
+	<mapping type="one-way">
+		<class-a>com.eureka.cms.core.cfg.bean.TagDescriptor</class-a>
+		<class-b>com.eureka.cms.rs.adapter.bean.cfg.TagBean</class-b>
+			
+	</mapping>
+	
+	<mapping type="one-way">
+		<class-a>com.eureka.cms.core.cfg.bean.BasicInformation</class-a>
+		<class-b>com.eureka.cms.rs.adapter.bean.cfg.BasicInfoBean</class-b>
+		<field>
+			<a>name</a>
+			<b>name</b>
+		</field>
+		<field>
+			<a>label</a>
+			<b>label</b>
+		</field>	
+	</mapping>
+	
+</mappings>
