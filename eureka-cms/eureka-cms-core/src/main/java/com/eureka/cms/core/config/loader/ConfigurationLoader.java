@@ -1,10 +1,10 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg.loader;
+package com.eureka.cms.core.config.loader;
 
-import com.eureka.cms.core.cfg.EurekaApplication;
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.EurekaApplication;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
 
 /**
  * @author mmazzilli

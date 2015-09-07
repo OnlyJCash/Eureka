@@ -14,10 +14,10 @@ import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import com.eureka.cms.core.cfg.Application;
-import com.eureka.cms.core.cfg.BootApplication;
-import com.eureka.cms.core.cfg.EurekaApplication;
 import com.eureka.cms.core.common.ServiceCoreNames;
+import com.eureka.cms.core.config.Application;
+import com.eureka.cms.core.config.BootApplication;
+import com.eureka.cms.core.config.EurekaApplication;
 import com.eureka.cms.core.service.cfg.ConfigurationService;
 import com.eureka.cms.rs.common.Constants;
 

@@ -3,9 +3,9 @@
  */
 package com.eureka.cms.rs.business;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.FieldDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.RelationDescriptor;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.FieldDescriptor;
+import com.eureka.cms.core.config.bean.entity.RelationDescriptor;
 import com.google.gson.ExclusionStrategy;
 import com.google.gson.FieldAttributes;
 

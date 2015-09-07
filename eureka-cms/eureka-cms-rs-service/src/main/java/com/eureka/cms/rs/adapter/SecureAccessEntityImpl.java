@@ -12,9 +12,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.util.Assert;
 
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
-import com.eureka.cms.core.cfg.bean.TagDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.TagDescriptor;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.eureka.cms.core.data.model.Group;
 import com.eureka.commons.aop.logging.Loggable;

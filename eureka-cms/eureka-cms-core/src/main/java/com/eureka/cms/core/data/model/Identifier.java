@@ -13,7 +13,8 @@ import javax.persistence.MappedSuperclass;
 
 
 /**
- * @author User
+ *
+ * @author michele.mazzilli
  *
  */
 @MappedSuperclass

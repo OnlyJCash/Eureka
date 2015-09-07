@@ -1,4 +1,4 @@
-package com.eureka.cms.core.cfg;
+package com.eureka.cms.core.config;
 
 import java.io.Serializable;
 import java.util.HashMap;
@@ -8,9 +8,9 @@ import java.util.Map;
 
 import org.springframework.util.Assert;
 
-import com.eureka.cms.core.cfg.bean.ProjectDescriptor;
-import com.eureka.cms.core.cfg.bean.TagDescriptor;
 import com.eureka.cms.core.common.Constants;
+import com.eureka.cms.core.config.bean.ProjectDescriptor;
+import com.eureka.cms.core.config.bean.TagDescriptor;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;

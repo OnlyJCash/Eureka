@@ -10,7 +10,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.eureka.cms.core.data.model.Group;
 import com.eureka.cms.rs.SpringContextInitialized;

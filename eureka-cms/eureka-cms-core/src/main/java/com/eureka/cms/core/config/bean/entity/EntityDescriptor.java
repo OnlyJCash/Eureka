@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg.bean.entity;
+package com.eureka.cms.core.config.bean.entity;
 
 import java.util.HashSet;
 import java.util.LinkedHashMap;
@@ -13,8 +13,8 @@ import org.apache.commons.lang3.BooleanUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import com.eureka.cms.core.cfg.bean.BasicInformation;
 import com.eureka.cms.core.common.FieldType;
+import com.eureka.cms.core.config.bean.BasicInformation;
 import com.eureka.cms.core.data.model.Identifier;
 import com.google.common.collect.Lists;
 

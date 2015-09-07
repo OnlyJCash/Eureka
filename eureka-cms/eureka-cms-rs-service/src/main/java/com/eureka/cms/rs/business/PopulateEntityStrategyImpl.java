@@ -14,10 +14,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.FieldDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.RelationDescriptor;
 import com.eureka.cms.core.common.FieldType;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.FieldDescriptor;
+import com.eureka.cms.core.config.bean.entity.RelationDescriptor;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.eureka.cms.core.data.model.Identifier;
 import com.eureka.cms.core.data.model.EurekaModel;

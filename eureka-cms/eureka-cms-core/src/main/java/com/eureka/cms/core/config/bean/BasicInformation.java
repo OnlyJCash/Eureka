@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.eureka.cms.core.cfg.bean;
+package com.eureka.cms.core.config.bean;
 
 import java.io.Serializable;
 

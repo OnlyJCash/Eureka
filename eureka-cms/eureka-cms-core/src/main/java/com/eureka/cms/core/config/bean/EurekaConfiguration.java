@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg.bean;
+package com.eureka.cms.core.config.bean;
 
 import java.io.Serializable;
 import java.util.LinkedHashMap;
@@ -9,8 +9,8 @@ import java.util.Map;
 
 import org.springframework.util.Assert;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
-import com.eureka.cms.core.cfg.exception.EurekaConfigurationException;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.exception.EurekaConfigurationException;
 import com.eureka.cms.core.support.EurekaSupport;
 
 /**

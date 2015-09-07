@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg.loader;
+package com.eureka.cms.core.config.loader;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -14,14 +14,14 @@ import org.reflections.ReflectionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.eureka.cms.core.cfg.annotation.entity.EurekaEntity;
-import com.eureka.cms.core.cfg.annotation.entity.Property;
-import com.eureka.cms.core.cfg.annotation.entity.Relation;
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.FieldDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.PropertyDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.RelationDescriptor;
 import com.eureka.cms.core.common.Constants;
+import com.eureka.cms.core.config.annotation.EurekaEntity;
+import com.eureka.cms.core.config.annotation.Property;
+import com.eureka.cms.core.config.annotation.Relation;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.FieldDescriptor;
+import com.eureka.cms.core.config.bean.entity.PropertyDescriptor;
+import com.eureka.cms.core.config.bean.entity.RelationDescriptor;
 import com.eureka.cms.core.support.EurekaSupport;
 import com.eureka.commons.aop.logging.Loggable;
 import com.google.common.base.Predicate;

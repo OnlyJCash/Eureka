@@ -3,7 +3,7 @@
  */
 package com.eureka.cms.rs.adapter;
 
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
 import com.eureka.cms.core.data.model.EurekaUser;
 
 /**

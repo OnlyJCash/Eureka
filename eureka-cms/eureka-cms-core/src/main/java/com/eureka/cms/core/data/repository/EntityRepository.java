@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.List;
 
-import com.eureka.cms.core.cfg.bean.entity.FieldDescriptor;
+import com.eureka.cms.core.config.bean.entity.FieldDescriptor;
 import com.eureka.cms.core.data.exception.DataRepositoryException;
 import com.eureka.cms.core.data.model.Identifier;
 import com.eureka.commons.bean.LabelValueBean;

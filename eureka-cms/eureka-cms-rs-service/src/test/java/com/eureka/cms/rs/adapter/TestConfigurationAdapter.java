@@ -8,10 +8,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.FieldDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.PropertyDescriptor;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.FieldDescriptor;
+import com.eureka.cms.core.config.bean.entity.PropertyDescriptor;
 import com.eureka.cms.core.service.data.AuthenticationService;
 import com.eureka.cms.core.service.data.EurekaUserService;
 import com.eureka.cms.rs.SpringContextInitialized;

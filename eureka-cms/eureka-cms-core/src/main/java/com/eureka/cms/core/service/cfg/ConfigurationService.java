@@ -3,9 +3,9 @@
  */
 package com.eureka.cms.core.service.cfg;
 
-import com.eureka.cms.core.cfg.EurekaApplication;
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.EurekaApplication;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 
 /**
  * @author mmazzilli

@@ -8,12 +8,13 @@ import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.eureka.cms.core.SpringContextInitialized;
-import com.eureka.cms.core.cfg.EurekaApplication;
-import com.eureka.cms.core.cfg.EurekaApplication.ApplicationBuilder;
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.FieldDescriptor;
-import com.eureka.cms.core.cfg.bean.entity.RelationDescriptor;
+import com.eureka.cms.core.config.EurekaApplication;
+import com.eureka.cms.core.config.EurekaApplication.ApplicationBuilder;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.FieldDescriptor;
+import com.eureka.cms.core.config.bean.entity.RelationDescriptor;
+import com.eureka.cms.core.config.loader.ConfigurationLoader;
 import com.example.model.Article;
 
 /**

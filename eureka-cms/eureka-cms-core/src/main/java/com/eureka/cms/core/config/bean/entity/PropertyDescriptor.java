@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg.bean.entity;
+package com.eureka.cms.core.config.bean.entity;
 
 import com.eureka.cms.core.common.FieldType;
 

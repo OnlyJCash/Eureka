@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg;
+package com.eureka.cms.core.config;
 
 /**
  * @author mmazzilli

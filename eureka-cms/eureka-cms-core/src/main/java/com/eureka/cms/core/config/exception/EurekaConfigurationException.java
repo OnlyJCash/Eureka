@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.eureka.cms.core.cfg.exception;
+package com.eureka.cms.core.config.exception;
 
 /**
  * @author mmazzilli

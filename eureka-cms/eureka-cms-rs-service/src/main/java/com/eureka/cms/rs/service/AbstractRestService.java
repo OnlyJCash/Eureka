@@ -6,7 +6,7 @@ package com.eureka.cms.rs.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.eureka.cms.core.data.model.Identifier;
 import com.eureka.cms.core.service.cfg.ConfigurationService;

@@ -8,10 +8,10 @@ import javax.persistence.Entity;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import com.eureka.cms.core.cfg.annotation.entity.EurekaEntity;
-import com.eureka.cms.core.cfg.annotation.entity.Property;
 import com.eureka.cms.core.common.Constants;
 import com.eureka.cms.core.common.PropertyType;
+import com.eureka.cms.core.config.annotation.EurekaEntity;
+import com.eureka.cms.core.config.annotation.Property;
 
 /**
  * @author User

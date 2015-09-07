@@ -6,10 +6,10 @@ package com.eureka.cms.core.service.cfg;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
-import com.eureka.cms.core.cfg.EurekaApplication;
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
-import com.eureka.cms.core.cfg.loader.ConfigurationLoader;
+import com.eureka.cms.core.config.EurekaApplication;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.loader.ConfigurationLoader;
 import com.eureka.cms.core.support.EurekaSupport;
 
 /**

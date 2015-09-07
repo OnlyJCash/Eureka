@@ -14,7 +14,7 @@ import org.dozer.MapperAware;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 import com.eureka.cms.rs.adapter.bean.cfg.entity.EntityBean;
 
 /**

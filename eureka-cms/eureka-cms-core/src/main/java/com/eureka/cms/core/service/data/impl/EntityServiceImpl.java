@@ -10,7 +10,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.eureka.cms.core.data.model.Identifier;
 import com.eureka.cms.core.data.repository.EntityRepository;

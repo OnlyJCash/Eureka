@@ -18,7 +18,7 @@ import org.hibernate.criterion.Restrictions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.eureka.cms.core.cfg.bean.entity.FieldDescriptor;
+import com.eureka.cms.core.config.bean.entity.FieldDescriptor;
 import com.eureka.cms.core.data.exception.DataRepositoryException;
 import com.eureka.cms.core.data.model.Identifier;
 import com.eureka.cms.core.data.repository.EurekaDaoSupport;

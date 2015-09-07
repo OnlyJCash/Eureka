@@ -7,7 +7,7 @@ import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.eureka.cms.core.data.model.EurekaModel;
 import com.eureka.cms.core.data.model.Audit;

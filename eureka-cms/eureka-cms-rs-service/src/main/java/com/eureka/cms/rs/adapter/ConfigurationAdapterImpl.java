@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 import org.dozer.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
 import com.eureka.cms.core.data.model.EurekaUser;
 import com.eureka.cms.core.service.cfg.ConfigurationService;
 import com.eureka.cms.core.service.data.AuthenticationService;

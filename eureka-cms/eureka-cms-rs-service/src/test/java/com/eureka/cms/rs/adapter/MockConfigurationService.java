@@ -5,9 +5,9 @@ package com.eureka.cms.rs.adapter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.eureka.cms.core.cfg.EurekaApplication;
-import com.eureka.cms.core.cfg.EurekaApplication.ApplicationBuilder;
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.EurekaApplication;
+import com.eureka.cms.core.config.EurekaApplication.ApplicationBuilder;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
 import com.eureka.cms.core.service.cfg.ConfigurationService;
 import com.example.model.Article;
 

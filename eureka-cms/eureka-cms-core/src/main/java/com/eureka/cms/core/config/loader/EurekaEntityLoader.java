@@ -1,9 +1,9 @@
 /**
  * 
  */
-package com.eureka.cms.core.cfg.loader;
+package com.eureka.cms.core.config.loader;
 
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 
 /**
  * @author mmazzilli

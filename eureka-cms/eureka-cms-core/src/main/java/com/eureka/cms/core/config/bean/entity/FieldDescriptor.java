@@ -1,14 +1,14 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg.bean.entity;
+package com.eureka.cms.core.config.bean.entity;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 
-import com.eureka.cms.core.cfg.bean.BasicInformation;
 import com.eureka.cms.core.common.FieldType;
 import com.eureka.cms.core.common.PropertyType;
+import com.eureka.cms.core.config.bean.BasicInformation;
 
 /**
  * @author mmazzilli

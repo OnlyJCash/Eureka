@@ -3,9 +3,9 @@
  */
 package com.example.model;
 
-import com.eureka.cms.core.cfg.annotation.entity.EurekaEntity;
-import com.eureka.cms.core.cfg.annotation.entity.Property;
 import com.eureka.cms.core.common.PropertyType;
+import com.eureka.cms.core.config.annotation.EurekaEntity;
+import com.eureka.cms.core.config.annotation.Property;
 import com.eureka.cms.core.data.model.Identifier;
 
 /**

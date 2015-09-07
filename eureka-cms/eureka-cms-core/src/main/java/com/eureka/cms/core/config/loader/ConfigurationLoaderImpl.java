@@ -1,7 +1,7 @@
 /**
  *
  */
-package com.eureka.cms.core.cfg.loader;
+package com.eureka.cms.core.config.loader;
 
 import java.util.Set;
 
@@ -9,10 +9,10 @@ import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.Assert;
 
-import com.eureka.cms.core.cfg.EurekaApplication;
-import com.eureka.cms.core.cfg.annotation.entity.EurekaEntity;
-import com.eureka.cms.core.cfg.bean.EurekaConfiguration;
-import com.eureka.cms.core.cfg.bean.entity.EntityDescriptor;
+import com.eureka.cms.core.config.EurekaApplication;
+import com.eureka.cms.core.config.annotation.EurekaEntity;
+import com.eureka.cms.core.config.bean.EurekaConfiguration;
+import com.eureka.cms.core.config.bean.entity.EntityDescriptor;
 import com.eureka.commons.aop.logging.Loggable;
 import com.eureka.commons.aop.logging.Loggable.Level;
 import com.eureka.commons.loader.AnnotationDiscoveryEngine;
