@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+
+
+	<!-- Import configuration service and data -->
+	<import resource="eureka-cms-core-service.xml" />
+	<import resource="eureka-cms-core-data.xml" />
+
+	<bean class="com.eureka.commons.aop.logging.AspectMethodLogger" />
+	<bean class="com.eureka.cms.core.service.data.aop.ServicePointcutDefinition" />
+
+	<!-- TODO Check -->
+	<bean class="com.eureka.cms.core.service.data.aop.AspectRowMetadata" />
+
+	<aop:aspectj-autoproxy />
+</beans>

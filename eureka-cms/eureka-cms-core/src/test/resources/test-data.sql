@@ -1,0 +1,1 @@
+insert into eureka_user (id, username, password, activationDate) values (1, 'admin', '111dc4a0904b76154e2f6646bdc582de', current_timestamp);

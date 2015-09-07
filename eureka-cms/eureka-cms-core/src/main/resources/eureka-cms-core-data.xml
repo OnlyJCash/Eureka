@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+			http://www.springframework.org/schema/tx
+        	http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<bean id="eurekaHBTemplate" class="org.springframework.orm.hibernate4.HibernateTemplate">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>	   					   
+	   		
+	<bean id="EurekaTransactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:annotation-driven transaction-manager="EurekaTransactionManager"  />  		
+	
+	<!-- ### DATA:Repository -->
+	<bean id="eurekaUserRepository" class="com.eureka.cms.core.data.repository.impl.UserModelRepositoryImpl">
+		<property name="hibernateTemplate" ref="eurekaHBTemplate"/>
+	</bean>
+	<bean id="eurekaEntityRepository" class="com.eureka.cms.core.data.repository.impl.EntityRepositoryImpl">
+		<property name="hibernateTemplate" ref="eurekaHBTemplate"/>
+		<property name="fetchProfileName" value="${cms-api.query.fetch.profile.name}"/>
+	</bean>
+	<bean id="eurekaAuthenticationTokenRepository" class="com.eureka.cms.core.data.repository.impl.AuthenticationTokenRepositoryImpl">
+		<property name="hibernateTemplate" ref="eurekaHBTemplate"/>
+	</bean>
+	<bean id="eurekaGroupRepository" class="com.eureka.cms.core.data.repository.impl.GroupRepositoryImpl">
+		<property name="hibernateTemplate" ref="eurekaHBTemplate"/>
+	</bean>
+	
+</beans>
